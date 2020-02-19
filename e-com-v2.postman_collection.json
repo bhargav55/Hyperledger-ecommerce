@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "8d20d3a0-6710-4df9-a3c0-ce9522aa9987",
+		"name": "e-com-v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Enroll",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Deepak",
+							"type": "text"
+						},
+						{
+							"key": "orgName",
+							"value": "Org1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MTk3ODUsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3NzgzNzg1fQ.AvfLCRWc82EuZtswq5j3ADPHG-9OZndxJzwa-Z9bDz0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"peers\":  [\"peer0.buyer.sample.com\",\"peer1.buyer.sample.com\"],\r\n\t\"fcn\":\"invoke\",\r\n\t\"args\": [\"createProduct\",\"Product-Name\",\"Product - Description\",\"100\",\"1000\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MTk3ODUsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3NzgzNzg1fQ.AvfLCRWc82EuZtswq5j3ADPHG-9OZndxJzwa-Z9bDz0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"peers\":  [\"peer0.buyer.sample.com\",\"peer1.buyer.sample.com\"],\r\n\t\"fcn\":\"invoke\",\r\n\t\"args\": [\"updateProduct\",\"Product1\",\"Product-Name\",\"Product-Description\",\"100\",\"1000\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MTk3ODUsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3NzgzNzg1fQ.AvfLCRWc82EuZtswq5j3ADPHG-9OZndxJzwa-Z9bDz0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"peers\":  [\"peer0.buyer.sample.com\",\"peer1.buyer.sample.com\"],\r\n\t\"fcn\":\"invoke\",\r\n\t\"args\": [\"createOrder\",\"Walmart\",\"Product1\",\"1\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MTk3ODUsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3NzgzNzg1fQ.AvfLCRWc82EuZtswq5j3ADPHG-9OZndxJzwa-Z9bDz0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"peers\":  [\"peer0.buyer.sample.com\",\"peer1.buyer.sample.com\"],\r\n\t\"fcn\":\"invoke\",\r\n\t\"args\": [\"updateOrderStatus\",\"Order1\",\"delivered\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Order Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MjA1NTcsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3Nzg0NTU3fQ.NLANsKKJHr5txm6JFiRFuou-bI41clEHop7TsoNgv2w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc/?peer=peer0.buyer.sample.com&args=[\"query\",\"{\\\"selector\\\":{\\\"Order_Id\\\":\\\"Order1\\\"}}\"]&chaincodeVersion=v0&fcn=Query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc",
+						""
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.buyer.sample.com"
+						},
+						{
+							"key": "args",
+							"value": "[\"query\",\"{\\\"selector\\\":{\\\"Order_Id\\\":\\\"Order1\\\"}}\"]"
+						},
+						{
+							"key": "chaincodeVersion",
+							"value": "v0"
+						},
+						{
+							"key": "fcn",
+							"value": "Query"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query To Get All Order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MjA1NTcsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3Nzg0NTU3fQ.NLANsKKJHr5txm6JFiRFuou-bI41clEHop7TsoNgv2w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc/?peer=peer0.buyer.sample.com&args=[\"query\",\"{\\\"selector\\\":{\\\"Order_Id\\\":{\\\"$ne\\\":\\\"1\\\"}}}}\"]&chaincodeVersion=v0&fcn=Query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc",
+						""
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.buyer.sample.com"
+						},
+						{
+							"key": "args",
+							"value": "[\"query\",\"{\\\"selector\\\":{\\\"Order_Id\\\":{\\\"$ne\\\":\\\"1\\\"}}}}\"]"
+						},
+						{
+							"key": "chaincodeVersion",
+							"value": "v0"
+						},
+						{
+							"key": "fcn",
+							"value": "Query"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query To Get All Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MjA1NTcsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3Nzg0NTU3fQ.NLANsKKJHr5txm6JFiRFuou-bI41clEHop7TsoNgv2w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc/?peer=peer0.buyer.sample.com&args=[\"query\",\"{\\\"selector\\\":{\\\"Product_Id\\\":{\\\"$ne\\\":\\\"1\\\"}}}}\"]&chaincodeVersion=v0&fcn=Query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc",
+						""
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.buyer.sample.com"
+						},
+						{
+							"key": "args",
+							"value": "[\"query\",\"{\\\"selector\\\":{\\\"Product_Id\\\":{\\\"$ne\\\":\\\"1\\\"}}}}\"]"
+						},
+						{
+							"key": "chaincodeVersion",
+							"value": "v0"
+						},
+						{
+							"key": "fcn",
+							"value": "Query"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Asset",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MjA1NTcsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3Nzg0NTU3fQ.NLANsKKJHr5txm6JFiRFuou-bI41clEHop7TsoNgv2w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc/?peer=peer0.buyer.sample.com&args=[\"queryAsset\",\"Product1\"]&chaincodeVersion=v0&fcn=Query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc",
+						""
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.buyer.sample.com"
+						},
+						{
+							"key": "args",
+							"value": "[\"queryAsset\",\"Product1\"]"
+						},
+						{
+							"key": "chaincodeVersion",
+							"value": "v0"
+						},
+						{
+							"key": "fcn",
+							"value": "Query"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query All Asset",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MjA1NTcsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3Nzg0NTU3fQ.NLANsKKJHr5txm6JFiRFuou-bI41clEHop7TsoNgv2w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc/?peer=peer0.buyer.sample.com&args=[\"queryAllAsset\"]&chaincodeVersion=v0&fcn=Query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc",
+						""
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.buyer.sample.com"
+						},
+						{
+							"key": "args",
+							"value": "[\"queryAllAsset\"]"
+						},
+						{
+							"key": "chaincodeVersion",
+							"value": "v0"
+						},
+						{
+							"key": "fcn",
+							"value": "Query"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get History For Records",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc4MjA1NTcsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6ImJ1eWVyIiwiaWF0IjoxNTY3Nzg0NTU3fQ.NLANsKKJHr5txm6JFiRFuou-bI41clEHop7TsoNgv2w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/mycc/?peer=peer0.buyer.sample.com&args=[\"getHistoryForRecord\",\"Product1\"]&chaincodeVersion=v0&fcn=Query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc",
+						""
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.buyer.sample.com"
+						},
+						{
+							"key": "args",
+							"value": "[\"getHistoryForRecord\",\"Product1\"]"
+						},
+						{
+							"key": "chaincodeVersion",
+							"value": "v0"
+						},
+						{
+							"key": "fcn",
+							"value": "Query"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
